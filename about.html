@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Slightly Lowked</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            background: var(--black);
+            color: var(--bone);
+        }
+
+        .about-hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .about-section {
+            margin-bottom: 6rem;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--washed-black);
+        }
+
+        .manifesto {
+            background: var(--black);
+            color: var(--bone);
+            padding: 4rem 2rem;
+            margin: 6rem 0;
+        }
+
+        .manifesto-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .manifesto h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .manifesto-line {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-transform: lowercase;
+            letter-spacing: 0.05em;
+            font-weight: 300;
+        }
+
+        .collage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .collage-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            border: 3px solid var(--black);
+        }
+
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="images/lowked_logo_transparent.png" alt="Slightly Lowked">
+        </a>
+        <div class="nav-links">
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="#" class="nav-cart">Cart (0)</a>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <h1>Stay Lowked</h1>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="about-section">
+            <h2>Origin</h2>
+            <p>Created for those who move in the quiet place between noise and knowledge — present, fluid, and almost unseen — this is an ode to creativity. It honors the makers who build in the margins, who slip beneath the chaos and let their work speak in subtler frequencies.</p>
+            <p>Here, movement is intentional, expression is instinctive, and grace is the confidence of knowing you never needed the spotlight to shine.</p>
+        </div>
+
+        <!-- Collage Grid -->
+        <div class="collage-grid">
+            <div class="collage-item">
+                <img src="images/lowked_graphic2.png" alt="Collage">
+            </div>
+            <div class="collage-item">
+                <img src="images/LOWKED_graphic4_.jpg" alt="Collage">
+            </div>
+            <div class="collage-item">
+                <img src="images/LOWKED_graphic6.jpg" alt="Collage">
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>Positioning</h2>
+            <p>Slightly Lowked sits between loud hype streetwear and pure minimalist basics. We live in the tension: clean silhouette + unexpected detail. Not trying hard. But undeniably intentional.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>DNA</h2>
+            <p>Surf. Punk. Music. Flow. We pull from wave energy, cut-and-paste distortion, guitar feedback, and movement. Natural tones disrupted by voltage colors. Clean but controlled chaos.</p>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="manifesto">
+        <div class="manifesto-content">
+            <h2>Manifesto</h2>
+            <p class="manifesto-line">stay lowked.</p>
+            <p class="manifesto-line">under the radar.</p>
+            <p class="manifesto-line">observe more.</p>
+            <p class="manifesto-line">less noise.</p>
+            <p class="manifesto-line">move different.</p>
+            <p class="manifesto-line">quiet current.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="#">Instagram</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="footer-tagline">Stay Lowked. Move Different.</p>
+            <p class="footer-copy">© 2026 Slightly Lowked. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

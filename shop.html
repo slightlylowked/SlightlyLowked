@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Slightly Lowked</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="images/lowked_logo_transparent.png" alt="Slightly Lowked">
+        </a>
+        <div class="nav-links">
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="#" class="nav-cart">Cart (0)</a>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <section class="shop-header">
+        <h1>All Products</h1>
+        <div class="shop-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="tees">Tees</button>
+            <button class="filter-btn" data-filter="beanies">Beanies</button>
+            <button class="filter-btn" data-filter="hoodies">Hoodies</button>
+            <button class="filter-btn" data-filter="socks">Socks</button>
+        </div>
+    </section>
+
+    <!-- Shop Grid -->
+    <section class="shop-grid">
+        <div class="product-grid">
+            <!-- Tees -->
+            <a href="product.html?id=voltage-tee" class="product-card" data-category="tees">
+                <div class="product-image">
+                    <img src="images/lowked_graphic2.png" alt="Voltage Tee">
+                </div>
+                <div class="product-info">
+                    <h3>Voltage Tee</h3>
+                    <p class="price">$42</p>
+                </div>
+            </a>
+
+            <a href="product.html?id=observer-tee" class="product-card" data-category="tees">
+                <div class="product-image">
+                    <img src="images/LOWKED_graphic4_.jpg" alt="Observer Tee">
+                </div>
+                <div class="product-info">
+                    <h3>Observer Tee</h3>
+                    <p class="price">$42</p>
+                </div>
+            </a>
+
+            <a href="product.html?id=static-tee" class="product-card" data-category="tees">
+                <div class="product-image">
+                    <img src="images/LOWKED_graphic6.jpg" alt="Static Tee">
+                </div>
+                <div class="product-info">
+                    <h3>Static Tee</h3>
+                    <p class="price">$42</p>
+                </div>
+            </a>
+
+            <!-- Beanies -->
+            <a href="product.html?id=observer-beanie" class="product-card" data-category="beanies">
+                <div class="product-image">
+                    <img src="images/LOWKED_graphic5.png" alt="Observer Beanie">
+                </div>
+                <div class="product-info">
+                    <h3>Observer Beanie</h3>
+                    <p class="price">$28</p>
+                </div>
+            </a>
+
+            <a href="product.html?id=frequency-beanie" class="product-card" data-category="beanies">
+                <div class="product-image">
+                    <img src="images/LOWKED_graphic7.jpg" alt="Frequency Beanie">
+                </div>
+                <div class="product-info">
+                    <h3>Frequency Beanie</h3>
+                    <p class="price">$28</p>
+                </div>
+            </a>
+
+            <!-- Hoodies -->
+            <a href="product.html?id=frequency-hoodie" class="product-card" data-category="hoodies">
+                <div class="product-image">
+                    <img src="images/LOWKED_Graphic3.jpg" alt="Frequency Hoodie">
+                </div>
+                <div class="product-info">
+                    <h3>Frequency Hoodie</h3>
+                    <p class="price">$78</p>
+                </div>
+            </a>
+
+            <!-- Socks -->
+            <a href="product.html?id=current-socks" class="product-card" data-category="socks">
+                <div class="product-image">
+                    <img src="images/LOWKED_graphic1_5.png" alt="Current Socks">
+                </div>
+                <div class="product-info">
+                    <h3>Current Socks</h3>
+                    <p class="price">$18</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="#">Instagram</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="footer-tagline">Stay Lowked. Move Different.</p>
+            <p class="footer-copy">© 2026 Slightly Lowked. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                products.forEach(product => {
+                    if (filter === 'all' || product.dataset.category === filter) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
