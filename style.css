@@ -179,7 +179,7 @@ body *:hover {
     font-weight: 900;
     letter-spacing: 0.2em;
     text-decoration: none;
-    margin-bottom: 0.75rem;
+    margin-bottom: 4.5rem;
     cursor: pointer;
     color: var(--off-white);
 }
