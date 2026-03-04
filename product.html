@@ -3,181 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product | Slightly Lowked</title>
+    <title>PRODUCT | SLIGHTLY LOWKED</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .product-detail {
-            max-width: 1200px;
-            margin: 10rem auto 6rem;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .product-image-main {
-            width: 100%;
-            border: 3px solid var(--black);
-            aspect-ratio: 1;
-            overflow: hidden;
-        }
-
-        .product-image-main img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-details h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            font-weight: 900;
-            letter-spacing: 0.05em;
-        }
-
-        .product-price {
-            font-size: 2rem;
-            color: var(--burnt-orange);
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-
-        .product-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            color: var(--washed-black);
-        }
-
-        .size-selector {
-            margin-bottom: 2rem;
-        }
-
-        .size-selector label {
-            display: block;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            letter-spacing: 0.1em;
-        }
-
-        .size-options {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .size-btn {
-            padding: 1rem 1.5rem;
-            border: 2px solid var(--black);
-            background: var(--bone);
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .size-btn:hover,
-        .size-btn.active {
-            background: var(--black);
-            color: var(--bone);
-        }
-
-        .add-to-cart {
-            width: 100%;
-            padding: 1.5rem;
-            background: var(--black);
-            color: var(--bone);
-            border: none;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 3px solid var(--black);
-        }
-
-        .add-to-cart:hover {
-            background: var(--bone);
-            color: var(--black);
-            transform: translateY(-2px);
-            box-shadow: 6px 6px 0 var(--burnt-orange);
-        }
-
-        .coming-soon {
-            background: var(--washed-black);
-            color: var(--bone);
-            padding: 1rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .product-detail {
-                grid-template-columns: 1fr;
-                margin-top: 8rem;
-            }
-        }
-    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <a href="index.html" class="nav-logo">
-            <img src="images/lowked_logo_transparent.png" alt="Slightly Lowked">
-        </a>
-        <div class="nav-links">
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="#" class="nav-cart">Cart (0)</a>
+<body class="dark">
+    <div class="noise"></div>
+
+    <!-- Nav -->
+    <nav class="nav-brutal">
+        <a href="index.html" class="nav-home">HOME</a>
+        <div class="nav-links-brutal">
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">INFO</a>
         </div>
     </nav>
 
     <!-- Product Detail -->
-    <section class="product-detail">
-        <div class="product-image-main">
-            <img src="images/lowked_graphic2.png" alt="Voltage Tee" id="productImage">
+    <section class="product-detail-brutal">
+        <div class="product-image-brutal">
+            <div class="product-placeholder-large">
+                <div class="placeholder-shape tee"></div>
+            </div>
         </div>
 
-        <div class="product-details">
-            <h1 id="productName">Voltage Tee</h1>
-            <p class="product-price" id="productPrice">$42</p>
-            
-            <div class="coming-soon">
-                Coming Soon — Products available Phase 1 Drop
+        <div class="product-info-brutal">
+            <h1>VOLTAGE TEE</h1>
+            <p class="price-brutal-large">$42</p>
+
+            <div class="status-banner">
+                PHASE 1 — COMING SOON
             </div>
 
-            <p class="product-description" id="productDescription">
-                Heavyweight 6.5oz cotton. Slightly boxy fit. Medium centered chest logo with bold back graphic. Controlled chaos meets clean silhouette.
-            </p>
+            <div class="product-description-brutal">
+                <p>Heavyweight 6.5oz cotton. Slightly boxy fit. Medium centered chest logo with bold back graphic.</p>
+                <p>Controlled chaos meets clean silhouette. Natural tones disrupted by voltage color hits.</p>
+            </div>
 
-            <div class="size-selector">
-                <label>Size</label>
-                <div class="size-options">
-                    <button class="size-btn">S</button>
-                    <button class="size-btn active">M</button>
-                    <button class="size-btn">L</button>
-                    <button class="size-btn">XL</button>
+            <div class="size-selector-brutal">
+                <label>SIZE</label>
+                <div class="size-buttons">
+                    <button class="size-btn-brutal">S</button>
+                    <button class="size-btn-brutal active">M</button>
+                    <button class="size-btn-brutal">L</button>
+                    <button class="size-btn-brutal">XL</button>
                 </div>
             </div>
 
-            <button class="add-to-cart">Notify When Available</button>
+            <button class="cta-brutal">NOTIFY WHEN AVAILABLE</button>
 
-            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--black);">
-                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--washed-black);">
-                    <strong>Details:</strong><br>
-                    • Heavyweight cotton<br>
-                    • Screen printed graphics<br>
-                    • Made to order<br>
-                    • Limited run
-                </p>
+            <div class="product-details-list">
+                <h3>DETAILS</h3>
+                <ul>
+                    <li>Heavyweight cotton</li>
+                    <li>Screen printed graphics</li>
+                    <li>Made to order</li>
+                    <li>Limited run</li>
+                    <li>Designed in California</li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- Related Products -->
+    <section class="related-brutal">
+        <h2>MORE PRODUCTS</h2>
+        <div class="related-grid">
+            <a href="#" class="product-brutal">
+                <div class="product-placeholder">
+                    <div class="placeholder-shape hoodie"></div>
+                </div>
+                <div class="product-label">
+                    <span>FREQUENCY HOODIE</span>
+                    <span class="price-brutal">$78</span>
+                </div>
+            </a>
+
+            <a href="#" class="product-brutal">
+                <div class="product-placeholder">
+                    <div class="placeholder-shape beanie"></div>
+                </div>
+                <div class="product-label">
+                    <span>OBSERVER BEANIE</span>
+                    <span class="price-brutal">$28</span>
+                </div>
+            </a>
+
+            <a href="#" class="product-brutal">
+                <div class="product-placeholder">
+                    <div class="placeholder-shape socks"></div>
+                </div>
+                <div class="product-label">
+                    <span>CURRENT SOCKS</span>
+                    <span class="price-brutal">$18</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer
+    <footer class="footer-brutal">
+        <div class="footer-brutal-content">
+            <p>STAY LOWKED. MOVE DIFFERENT.</p>
+            <div class="footer-links-brutal">
+                <a href="#">INSTAGRAM</a>
+                <a href="#">CONTACT</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sizeBtns = document.querySelectorAll('.size-btn-brutal');
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
