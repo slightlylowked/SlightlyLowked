@@ -143,10 +143,9 @@ body {
     width: 100%;
     transform: scale(0.6);
     transform-origin: center top;
-    filter: drop-shadow(0 0 20px rgba(100, 255, 120, 0.5))
-            drop-shadow(0 0 50px rgba(100, 255, 120, 0.35))
-            drop-shadow(0 0 80px rgba(100, 255, 120, 0.2));
-    animation: glowCycle 12s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 220, 80, 0.5))
+            drop-shadow(0 0 50px rgba(255, 220, 80, 0.35))
+            drop-shadow(0 0 80px rgba(255, 220, 80, 0.2));
 }
 
 .logo-secondary {
