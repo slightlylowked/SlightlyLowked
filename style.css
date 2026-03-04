@@ -478,6 +478,47 @@ body *:hover {
     z-index: 1;
 }
 
+/* Shop footer: buddha image faded into dark background */
+.footer-shop {
+    background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url("images/buddha.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Home footer: guitarman1 image faded into dark background (90% dark) */
+.footer-home {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-home-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.footer-home-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    filter: drop-shadow(0 0 50px rgba(212, 255, 0, 0.35))
+            drop-shadow(0 0 100px rgba(212, 255, 0, 0.2));
+}
+
+.footer-home-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.9);
+    z-index: 1;
+}
+
+.footer-home .footer-brutal-content {
+    position: relative;
+    z-index: 2;
+}
+
 .footer-brutal-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -488,6 +529,11 @@ body *:hover {
     font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+}
+
+.footer-brutal-content p.footer-tagline-line {
+    margin-top: -1.5rem;
     margin-bottom: 2rem;
 }
 
