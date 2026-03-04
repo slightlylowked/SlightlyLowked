@@ -110,6 +110,13 @@ body *:hover {
     border-bottom: 2px solid var(--mid-gray);
 }
 
+/* Home page: nav blends into chaos/hero background */
+body.home-page .nav-brutal {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+}
+
 .nav-home {
     font-size: 1.2rem;
     font-weight: 900;
@@ -660,7 +667,7 @@ body *:hover {
 
 /* About page full-page background */
 body.about-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), var(--black) url("images/about-bg.png") center / cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), var(--black) url("images/about-bg.png") center 18% / cover no-repeat fixed;
 }
 
 /* Let the body background show through hero and origin only; footer stays solid */
