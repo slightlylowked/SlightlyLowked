@@ -164,6 +164,12 @@ body *:hover {
             drop-shadow(0 0 80px rgba(255, 220, 80, 0.2));
 }
 
+@media (max-width: 768px) {
+    .logo-massive img {
+        transform: scale(0.9); /* 50% larger than 0.6 on mobile */
+    }
+}
+
 /* Collection trigger: title + spinning sticker (both clickable) */
 .collection-trigger-wrap {
     display: flex;
@@ -478,16 +484,7 @@ body *:hover {
     z-index: 1;
 }
 
-/* Shop page: buddha image as full-page background */
-body.shop-page {
-    background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), var(--black) url("images/buddha.jpg") center / cover no-repeat fixed;
-}
-
-body.shop-page .footer-shop {
-    background: transparent;
-}
-
-/* Shop footer: buddha image faded into dark background (when not full-page) */
+/* Shop footer: buddha image faded into dark background */
 .footer-shop {
     background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url("images/buddha.jpg");
     background-size: cover;
