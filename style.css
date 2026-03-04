@@ -132,13 +132,87 @@ body {
 .logo-massive {
     width: 100%;
     max-width: 800px;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     animation: glitchLogo 5s infinite;
 }
 
 .logo-massive img {
     width: 100%;
-    filter: drop-shadow(0 0 40px rgba(212, 255, 0, 0.3));
+    filter: drop-shadow(0 0 20px rgba(100, 255, 120, 0.5))
+            drop-shadow(0 0 50px rgba(100, 255, 120, 0.35))
+            drop-shadow(0 0 80px rgba(100, 255, 120, 0.2));
+    animation: glowCycle 12s ease-in-out infinite;
+}
+
+.logo-secondary {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    margin-top: -4rem;
+}
+
+.logo-secondary img {
+    width: 100%;
+    filter: drop-shadow(0 0 15px rgba(100, 255, 120, 0.5))
+            drop-shadow(0 0 40px rgba(100, 255, 120, 0.35))
+            drop-shadow(0 0 60px rgba(100, 255, 120, 0.2));
+    animation: glowCycleSecondary 12s ease-in-out infinite 0.4s;
+}
+
+@keyframes glowCycle {
+    0%, 100% {
+        filter: drop-shadow(0 0 25px rgba(100, 255, 120, 0.55))
+                drop-shadow(0 0 55px rgba(100, 255, 120, 0.4))
+                drop-shadow(0 0 90px rgba(100, 255, 120, 0.25));
+    }
+    20% {
+        filter: drop-shadow(0 0 25px rgba(255, 180, 50, 0.55))
+                drop-shadow(0 0 55px rgba(255, 180, 50, 0.4))
+                drop-shadow(0 0 90px rgba(255, 180, 50, 0.25));
+    }
+    40% {
+        filter: drop-shadow(0 0 25px rgba(180, 100, 255, 0.55))
+                drop-shadow(0 0 55px rgba(180, 100, 255, 0.4))
+                drop-shadow(0 0 90px rgba(180, 100, 255, 0.25));
+    }
+    60% {
+        filter: drop-shadow(0 0 25px rgba(255, 80, 80, 0.55))
+                drop-shadow(0 0 55px rgba(255, 80, 80, 0.4))
+                drop-shadow(0 0 90px rgba(255, 80, 80, 0.25));
+    }
+    80% {
+        filter: drop-shadow(0 0 25px rgba(80, 150, 255, 0.55))
+                drop-shadow(0 0 55px rgba(80, 150, 255, 0.4))
+                drop-shadow(0 0 90px rgba(80, 150, 255, 0.25));
+    }
+}
+
+@keyframes glowCycleSecondary {
+    0%, 100% {
+        filter: drop-shadow(0 0 18px rgba(100, 255, 120, 0.55))
+                drop-shadow(0 0 45px rgba(100, 255, 120, 0.4))
+                drop-shadow(0 0 70px rgba(100, 255, 120, 0.25));
+    }
+    20% {
+        filter: drop-shadow(0 0 18px rgba(255, 180, 50, 0.55))
+                drop-shadow(0 0 45px rgba(255, 180, 50, 0.4))
+                drop-shadow(0 0 70px rgba(255, 180, 50, 0.25));
+    }
+    40% {
+        filter: drop-shadow(0 0 18px rgba(180, 100, 255, 0.55))
+                drop-shadow(0 0 45px rgba(180, 100, 255, 0.4))
+                drop-shadow(0 0 70px rgba(180, 100, 255, 0.25));
+    }
+    60% {
+        filter: drop-shadow(0 0 18px rgba(255, 80, 80, 0.55))
+                drop-shadow(0 0 45px rgba(255, 80, 80, 0.4))
+                drop-shadow(0 0 70px rgba(255, 80, 80, 0.25));
+    }
+    80% {
+        filter: drop-shadow(0 0 18px rgba(80, 150, 255, 0.55))
+                drop-shadow(0 0 45px rgba(80, 150, 255, 0.4))
+                drop-shadow(0 0 70px rgba(80, 150, 255, 0.25));
+    }
 }
 
 @keyframes glitchLogo {
@@ -459,4 +533,411 @@ body {
     font-weight: 900;
     letter-spacing: 0.2em;
     color: var(--acid);
+}/* ABOUT PAGE STYLES */
+.about-hero-brutal {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.about-graphic-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about-graphic-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3) contrast(1.2);
+}
+
+.about-hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-text h1 {
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: var(--off-white);
+    text-shadow: 4px 4px 0 var(--black);
+}
+
+.manifesto-brutal {
+    padding: 8rem 2rem;
+    background: var(--dark-gray);
+    border-top: 3px solid var(--mid-gray);
+    border-bottom: 3px solid var(--mid-gray);
+}
+
+.manifesto-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.manifesto-text h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.15em;
+}
+
+.manifesto-lines p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    color: var(--light-gray);
+}
+
+.manifesto-graphic img {
+    width: 100%;
+    border: 3px solid var(--mid-gray);
+}
+
+.origin-brutal {
+    padding: 8rem 2rem;
+    background: var(--black);
+}
+
+.origin-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.origin-content h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.15em;
+}
+
+.origin-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--light-gray);
+}
+
+.collage-chaos {
+    padding: 6rem 2rem;
+    background: var(--dark-gray);
+}
+
+.collage-brutal-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 1.5rem;
+}
+
+.collage-brutal-item {
+    border: 3px solid var(--black);
+    overflow: hidden;
+    position: relative;
+}
+
+.collage-brutal-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.collage-brutal-item.wide {
+    grid-column: span 2;
+}
+
+.collage-brutal-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.collage-brutal-item:hover img {
+    transform: scale(1.1);
+}
+
+.dna-brutal {
+    padding: 8rem 2rem;
+    background: var(--black);
+}
+
+.dna-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dna-content h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.15em;
+    text-align: center;
+}
+
+.dna-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.dna-item {
+    border: 2px solid var(--mid-gray);
+    padding: 2rem;
+    background: var(--dark-gray);
+}
+
+.dna-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    color: var(--acid);
+}
+
+.dna-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--light-gray);
+}
+
+.positioning-brutal {
+    padding: 8rem 2rem;
+    background: var(--mid-gray);
+    border-top: 3px solid var(--light-gray);
+    border-bottom: 3px solid var(--light-gray);
+}
+
+.positioning-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.positioning-statement {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .manifesto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collage-brutal-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+
+    .collage-brutal-item.large,
+    .collage-brutal-item.wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .dna-grid {
+        grid-template-columns: 1fr;
+    }
+}/* PRODUCT PAGE STYLES */
+.product-detail-brutal {
+    max-width: 1400px;
+    margin: 12rem auto 6rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.product-image-brutal {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.product-placeholder-large {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--dark-gray);
+    border: 3px solid var(--mid-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-placeholder-large .placeholder-shape {
+    width: 50%;
+    height: 60%;
+}
+
+.product-info-brutal h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.price-brutal-large {
+    font-size: 2.5rem;
+    color: var(--acid);
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.status-banner {
+    padding: 1.5rem;
+    background: var(--mid-gray);
+    border: 2px solid var(--light-gray);
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    margin-bottom: 3rem;
+    color: var(--acid);
+}
+
+.product-description-brutal {
+    margin-bottom: 3rem;
+}
+
+.product-description-brutal p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-gray);
+    margin-bottom: 1.5rem;
+}
+
+.size-selector-brutal {
+    margin-bottom: 3rem;
+}
+
+.size-selector-brutal label {
+    display: block;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.size-btn-brutal {
+    padding: 1.2rem 2rem;
+    background: var(--dark-gray);
+    border: 2px solid var(--mid-gray);
+    color: var(--light-gray);
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.size-btn-brutal:hover,
+.size-btn-brutal.active {
+    background: var(--black);
+    border-color: var(--acid);
+    color: var(--acid);
+}
+
+.cta-brutal {
+    width: 100%;
+    padding: 2rem;
+    background: var(--black);
+    border: 3px solid var(--acid);
+    color: var(--acid);
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 3rem;
+}
+
+.cta-brutal:hover {
+    background: var(--acid);
+    color: var(--black);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--mid-gray);
+}
+
+.product-details-list {
+    padding: 2rem;
+    background: var(--dark-gray);
+    border: 2px solid var(--mid-gray);
+}
+
+.product-details-list h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.product-details-list ul {
+    list-style: none;
+}
+
+.product-details-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--mid-gray);
+    color: var(--light-gray);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+.product-details-list li:last-child {
+    border-bottom: none;
+}
+
+.related-brutal {
+    padding: 6rem 2rem;
+    background: var(--dark-gray);
+    border-top: 3px solid var(--mid-gray);
+}
+
+.related-brutal h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 0.15em;
+}
+
+.related-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .product-detail-brutal {
+        grid-template-columns: 1fr;
+        margin-top: 8rem;
+        gap: 3rem;
+    }
+
+    .product-image-brutal {
+        position: relative;
+        top: 0;
+    }
+
+    .size-buttons {
+        flex-wrap: wrap;
+    }
 }
