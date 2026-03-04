@@ -478,7 +478,16 @@ body *:hover {
     z-index: 1;
 }
 
-/* Shop footer: buddha image faded into dark background */
+/* Shop page: buddha image as full-page background */
+body.shop-page {
+    background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), var(--black) url("images/buddha.jpg") center / cover no-repeat fixed;
+}
+
+body.shop-page .footer-shop {
+    background: transparent;
+}
+
+/* Shop footer: buddha image faded into dark background (when not full-page) */
 .footer-shop {
     background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url("images/buddha.jpg");
     background-size: cover;
@@ -650,7 +659,20 @@ body *:hover {
     font-weight: 900;
     letter-spacing: 0.2em;
     color: var(--acid);
-}/* ABOUT PAGE STYLES */
+}
+
+/* About page full-page background */
+body.about-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), var(--black) url("images/about-bg.png") center / cover no-repeat fixed;
+}
+
+/* Let the body background show through hero and origin only; footer stays solid */
+body.about-page .about-hero-brutal,
+body.about-page .origin-brutal {
+    background: transparent;
+}
+
+/* ABOUT PAGE STYLES */
 .about-hero-brutal {
     min-height: 80vh;
     position: relative;
