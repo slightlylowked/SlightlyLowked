@@ -669,33 +669,14 @@ body.home-page .nav-brutal {
     color: var(--acid);
 }
 
-/* About page: white background (image unchanged), full image visible */
+/* About page full-page background: full brightness, full image visible */
 body.about-page {
-    background-color: #fff;
+    background-color: var(--black);
     background-image: url("images/SLIGHTLY LOWKED (5).png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #111;
-}
-
-/* About page: nav and footer white with dark text */
-body.about-page .nav-brutal {
-    background: #fff;
-    backdrop-filter: none;
-    border-bottom: none;
-}
-body.about-page .nav-brutal a,
-body.about-page .footer-brutal a {
-    color: #111;
-}
-body.about-page .footer-brutal {
-    background: #fff;
-    border-top: none;
-}
-body.about-page .footer-brutal-content p {
-    color: #111;
 }
 
 /* Let the body background show through hero and origin only; footer stays solid */
