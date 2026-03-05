@@ -171,6 +171,10 @@ body.home-page .nav-brutal {
             drop-shadow(0 0 80px rgba(255, 220, 80, 0.2));
 }
 
+.logo-massive img.logo-under-hero {
+    margin-top: -5rem;
+}
+
 @media (max-width: 768px) {
     .logo-massive img {
         transform: scale(0.9); /* 50% larger than 0.6 on mobile */
