@@ -22,12 +22,12 @@
     <section class="product-detail-brutal">
         <div class="product-image-brutal">
             <div class="product-placeholder-large">
-                <div class="placeholder-shape tee"></div>
+                <img id="voltage-tee-image" src="images/SLIGHTLY LOWKED shirt.png" alt="SLIGHTLY LOWKED TEE - ORIGINAL">
             </div>
         </div>
 
         <div class="product-info-brutal">
-            <h1>VOLTAGE TEE</h1>
+            <h1>SLIGHTLY LOWKED TEE</h1>
             <p class="price-brutal-large">$42</p>
 
             <div class="status-banner">
@@ -37,6 +37,14 @@
             <div class="product-description-brutal">
                 <p>Heavyweight 6.5oz cotton. Slightly boxy fit. Medium centered chest logo with bold back graphic.</p>
                 <p>Controlled chaos meets clean silhouette. Natural tones disrupted by voltage color hits.</p>
+            </div>
+
+            <div class="color-selector-brutal">
+                <label>COLOR</label>
+                <div class="color-buttons">
+                    <button class="color-btn-brutal active" data-image="images/SLIGHTLY LOWKED shirt.png" data-alt="SLIGHTLY LOWKED TEE - WHITE" data-box-bg="dark">WHITE</button>
+                    <button class="color-btn-brutal" data-image="images/LOWKED TEE BLACK.png" data-alt="SLIGHTLY LOWKED TEE - BLACK" data-box-bg="light">BLACK</button>
+                </div>
             </div>
 
             <div class="size-selector-brutal">
@@ -103,7 +111,7 @@
     <!-- Footer -->
     <footer class="footer-brutal">
         <div class="footer-brutal-content">
-            <p>BETWEEN NOISE AND KNOWING. STAY LOWKED</p>
+            <p>BETWEEN NOISE AND KNOWING</p>
             <div class="footer-links-brutal">
                 <a href="https://www.instagram.com/slightly_lowked__/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
                 <a href="#">CONTACT</a>
@@ -117,6 +125,19 @@
             btn.addEventListener('click', () => {
                 sizeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
+            });
+        });
+
+        const productImage = document.getElementById('voltage-tee-image');
+        const productImageBox = document.querySelector('.product-placeholder-large');
+        const colorBtns = document.querySelectorAll('.color-btn-brutal');
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                colorBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                productImage.src = btn.dataset.image;
+                productImage.alt = btn.dataset.alt;
+                productImageBox.classList.toggle('light-bg', btn.dataset.boxBg === 'light');
             });
         });
     </script>
