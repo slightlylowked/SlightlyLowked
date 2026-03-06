@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCT | SLIGHTLY LOWKED</title>
+    <title>PRODUCT | SUNSET RATS TEE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
@@ -22,12 +22,12 @@
     <section class="product-detail-brutal">
         <div class="product-image-brutal">
             <div class="product-placeholder-large">
-                <img id="voltage-tee-image" src="images/SLIGHTLY LOWKED shirt.png" alt="SLIGHTLY LOWKED TEE - ORIGINAL">
+                <img id="sunset-rats-tee-image" src="images/sunset rats tee.png" alt="SUNSET RATS TEE - WHITE">
             </div>
         </div>
 
         <div class="product-info-brutal">
-            <h1>SLIGHTLY LOWKED TEE</h1>
+            <h1>SUNSET RATS TEE</h1>
             <p class="price-brutal-large">$42</p>
 
             <div class="status-banner">
@@ -35,14 +35,14 @@
             </div>
 
             <div class="product-description-brutal">
-                <p>Heavyweight 6.5oz cotton. Slightly boxy fit. Medium centered chest logo with bold back graphic.</p>
+                <p>Heavyweight 6.5oz cotton. Slightly boxy fit. Signature SUNSET RATS front graphic.</p>
             </div>
 
             <div class="color-selector-brutal">
                 <label>COLOR</label>
                 <div class="color-buttons">
-                    <button class="color-btn-brutal active" data-image="images/SLIGHTLY LOWKED shirt.png" data-alt="SLIGHTLY LOWKED TEE - WHITE" data-box-bg="dark">WHITE</button>
-                    <button class="color-btn-brutal" data-image="images/LOWKED TEE BLACK.png" data-alt="SLIGHTLY LOWKED TEE - BLACK" data-box-bg="light">BLACK</button>
+                    <button class="color-btn-brutal active" data-image="images/sunset rats tee.png" data-alt="SUNSET RATS TEE - WHITE">WHITE</button>
+                    <button class="color-btn-brutal" data-image="images/sunset rats tee bone.png" data-alt="SUNSET RATS TEE - BONE">BONE</button>
                 </div>
             </div>
 
@@ -71,42 +71,6 @@
         </div>
     </section>
 
-    <!-- Related Products -->
-    <section class="related-brutal">
-        <h2>MORE PRODUCTS</h2>
-        <div class="related-grid">
-            <a href="#" class="product-brutal">
-                <div class="product-placeholder">
-                    <div class="placeholder-shape hoodie"></div>
-                </div>
-                <div class="product-label">
-                    <span>FREQUENCY HOODIE</span>
-                    <span class="price-brutal">$78</span>
-                </div>
-            </a>
-
-            <a href="#" class="product-brutal">
-                <div class="product-placeholder">
-                    <div class="placeholder-shape beanie"></div>
-                </div>
-                <div class="product-label">
-                    <span>OBSERVER BEANIE</span>
-                    <span class="price-brutal">$28</span>
-                </div>
-            </a>
-
-            <a href="#" class="product-brutal">
-                <div class="product-placeholder">
-                    <div class="placeholder-shape socks"></div>
-                </div>
-                <div class="product-label">
-                    <span>CURRENT SOCKS</span>
-                    <span class="price-brutal">$18</span>
-                </div>
-            </a>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer-brutal">
         <div class="footer-brutal-content">
@@ -127,8 +91,7 @@
             });
         });
 
-        const productImage = document.getElementById('voltage-tee-image');
-        const productImageBox = document.querySelector('.product-placeholder-large');
+        const productImage = document.getElementById('sunset-rats-tee-image');
         const colorBtns = document.querySelectorAll('.color-btn-brutal');
         colorBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -136,7 +99,6 @@
                 btn.classList.add('active');
                 productImage.src = btn.dataset.image;
                 productImage.alt = btn.dataset.alt;
-                productImageBox.classList.toggle('light-bg', btn.dataset.boxBg === 'light');
             });
         });
     </script>

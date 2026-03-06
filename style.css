@@ -419,6 +419,11 @@ body.home-page .nav-brutal {
     height: 80%;
 }
 
+/* Keep featured SUNSET RATS card text/price fully visible */
+.sunset-feature-card .product-placeholder.tall {
+    height: 72%;
+}
+
 .product-placeholder img,
 .product-placeholder-large img {
     width: 100%;
@@ -957,7 +962,7 @@ body.about-page .origin-brutal {
 }
 
 .product-placeholder-large.light-bg {
-    background: #fff;
+    background: var(--acid);
 }
 
 .product-placeholder-large .placeholder-shape {
