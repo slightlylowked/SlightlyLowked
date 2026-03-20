@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT | STAY LOWKED TEE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+    <div class="noise"></div>
+
+    <!-- Nav -->
+    <nav class="nav-brutal">
+        <a href="index.html" class="nav-home">HOME</a>
+        <div class="nav-links-brutal">
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">INFO</a>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail-brutal">
+        <div class="product-image-brutal">
+            <div class="product-placeholder-large">
+                <img id="stay-lowked-tee-image" src="images/STAYLOWKEDTEE(FRONT).png" alt="STAY LOWKED TEE - FRONT">
+            </div>
+        </div>
+
+        <div class="product-info-brutal">
+            <h1>STAY LOWKED TEE</h1>
+            <p class="price-brutal-large">$42</p>
+
+            <div class="status-banner">
+                PRODUCTS — COMING SOON
+            </div>
+
+            <div class="product-description-brutal">
+                <p>Heavyweight 6.5oz cotton. Slightly boxy fit. STAY LOWKED artwork shown from front and back views.</p>
+            </div>
+
+            <div class="color-selector-brutal">
+                <label>VIEW</label>
+                <div class="color-buttons">
+                    <button class="color-btn-brutal active" data-image="images/STAYLOWKEDTEE(FRONT).png" data-alt="STAY LOWKED TEE - FRONT">FRONT</button>
+                    <button class="color-btn-brutal" data-image="images/STAYLOWKEDTEE(BACK).png" data-alt="STAY LOWKED TEE - BACK">BACK</button>
+                </div>
+            </div>
+
+            <div class="size-selector-brutal">
+                <label>SIZE</label>
+                <div class="size-buttons">
+                    <button class="size-btn-brutal">S</button>
+                    <button class="size-btn-brutal active">M</button>
+                    <button class="size-btn-brutal">L</button>
+                    <button class="size-btn-brutal">XL</button>
+                </div>
+            </div>
+
+            <button class="cta-brutal">NOTIFY WHEN AVAILABLE</button>
+
+            <div class="product-details-list">
+                <h3>DETAILS</h3>
+                <ul>
+                    <li>Heavyweight cotton</li>
+                    <li>Screen printed graphics</li>
+                    <li>Made to order</li>
+                    <li>Limited run</li>
+                    <li>Designed in California</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-brutal">
+        <div class="footer-brutal-content">
+            <p>BETWEEN NOISE AND KNOWING</p>
+            <div class="footer-links-brutal">
+                <a href="https://www.instagram.com/slightly_lowked__/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                <a href="#">CONTACT</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sizeBtns = document.querySelectorAll('.size-btn-brutal');
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        const productImage = document.getElementById('stay-lowked-tee-image');
+        const viewBtns = document.querySelectorAll('.color-btn-brutal');
+        viewBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                viewBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                productImage.src = btn.dataset.image;
+                productImage.alt = btn.dataset.alt;
+            });
+        });
+    </script>
+</body>
+</html>
