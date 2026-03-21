@@ -161,6 +161,14 @@ body.home-page .nav-brutal {
     padding: 2rem;
 }
 
+.hero-logo-link {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-massive {
     width: 100%;
     max-width: 800px;
