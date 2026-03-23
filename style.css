@@ -975,6 +975,45 @@ body.about-page .origin-brutal {
     overflow: hidden;
 }
 
+.sl-tee-carousel {
+    position: relative;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.45rem;
+    z-index: 3;
+}
+
+.carousel-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(10, 10, 10, 0.4);
+}
+
+.carousel-dot.active {
+    background: #fff;
+}
+
+.carousel-hint {
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--light-gray);
+    transition: opacity 0.25s ease;
+}
+
+.carousel-hint.is-hidden {
+    opacity: 0;
+}
+
 .product-placeholder-large.light-bg {
     background: var(--acid);
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCT | STAY LOWKED TEE</title>
+    <title>PRODUCT | SL TEE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
@@ -22,31 +22,31 @@
     <section class="product-detail-brutal">
         <div class="product-image-brutal">
             <div class="product-placeholder-large sl-tee-carousel">
-                <img id="stay-lowked-tee-image" src="images/STAYLOWKEDTEE(FRONT).png" alt="STAY LOWKED TEE - FRONT">
+                <img id="sl-tee-image" src="images/SL TEE.png" alt="SL TEE - FRONT">
                 <div class="carousel-dots" aria-hidden="true">
-                    <span class="carousel-dot active" id="stay-dot-front"></span>
-                    <span class="carousel-dot" id="stay-dot-back"></span>
+                    <span class="carousel-dot active" id="sl-dot-front"></span>
+                    <span class="carousel-dot" id="sl-dot-back"></span>
                 </div>
             </div>
-            <p class="carousel-hint" id="stay-lowked-hint">Swipe or tap image to view back</p>
+            <p class="carousel-hint" id="sl-tee-hint">Swipe or tap image to view back</p>
         </div>
 
         <div class="product-info-brutal">
-            <h1>STAY LOWKED TEE</h1>
-            <p class="price-brutal-large">$42</p>
+            <h1>SL TEE</h1>
+            <p class="price-brutal-large">$28</p>
 
             <div class="status-banner">
                 PRODUCTS — COMING SOON
             </div>
 
             <div class="product-description-brutal">
-                <p>Heavyweight 6.5oz cotton. Slightly boxy fit. STAY LOWKED artwork shown from front and back views.</p>
+                <p>Heavyweight cotton tee. Product images show front and back views of the same shirt.</p>
             </div>
 
             <div class="color-selector-brutal">
                 <label>VIEW</label>
                 <div class="color-buttons">
-                    <button class="color-btn-brutal active" id="stay-lowked-view-indicator">FRONT</button>
+                    <button class="color-btn-brutal active" id="sl-tee-view-indicator">FRONT</button>
                 </div>
             </div>
 
@@ -95,14 +95,14 @@
             });
         });
 
-        const productImage = document.getElementById('stay-lowked-tee-image');
-        const viewIndicator = document.getElementById('stay-lowked-view-indicator');
-        const dotFront = document.getElementById('stay-dot-front');
-        const dotBack = document.getElementById('stay-dot-back');
-        const hint = document.getElementById('stay-lowked-hint');
+        const productImage = document.getElementById('sl-tee-image');
+        const viewIndicator = document.getElementById('sl-tee-view-indicator');
+        const dotFront = document.getElementById('sl-dot-front');
+        const dotBack = document.getElementById('sl-dot-back');
+        const hint = document.getElementById('sl-tee-hint');
         const imageSet = [
-            { src: 'images/STAYLOWKEDTEE(FRONT).png', alt: 'STAY LOWKED TEE - FRONT', label: 'FRONT' },
-            { src: 'images/STAYLOWKEDTEE(BACK).png', alt: 'STAY LOWKED TEE - BACK', label: 'BACK' }
+            { src: 'images/SL TEE.png', alt: 'SL TEE - FRONT', label: 'FRONT' },
+            { src: 'images/SL TEE BACK.png', alt: 'SL TEE - BACK', label: 'BACK' }
         ];
         let currentIndex = 0;
 
@@ -121,8 +121,10 @@
             hint.classList.add('is-hidden');
         }
 
+        // Desktop toggle: click on main image.
         productImage.addEventListener('click', toggleView);
 
+        // Mobile toggle: swipe left/right on main image.
         let touchStartX = null;
         productImage.addEventListener('touchstart', (e) => {
             touchStartX = e.touches[0].clientX;
