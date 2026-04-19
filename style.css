@@ -396,52 +396,18 @@ body.home-page .nav-brutal {
     color: var(--off-white);
 }
 
-.shop-landing-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 520px;
-    margin: 0 auto;
-    gap: 2rem;
-}
-
-.shop-category-card {
-    min-height: 380px;
-}
-
-.shop-category-placeholder {
-    height: 78%;
-}
-
-.shop-category-preview {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-}
-
-.shop-category-meta {
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
-    color: var(--light-gray);
-    font-weight: 700;
-}
-
-.tees-back {
-    text-align: center;
+.products-chaos .section-brutal {
     margin-bottom: 1rem;
 }
 
-.tees-back a {
+.shop-subsection-title {
+    text-align: center;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 900;
+    letter-spacing: 0.25em;
     color: var(--light-gray);
-    text-decoration: none;
-    letter-spacing: 0.12em;
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.tees-back a:hover {
-    color: var(--acid);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
 }
 
 .grid-broken {
