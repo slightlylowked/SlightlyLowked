@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCT | SUNSET RATS</title>
+    <title>PRODUCT | CHEATER FIVE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
@@ -22,12 +22,12 @@
     <section class="product-detail-brutal">
         <div class="product-image-brutal">
             <div class="product-placeholder-large">
-                <img id="sunset-rats-tee-image" src="images/sunset rats tee.png" alt="SUNSET RATS - WHITE">
+                <img src="images/surfer girl.png" alt="CHEATER FIVE">
             </div>
         </div>
 
         <div class="product-info-brutal">
-            <h1>SUNSET RATS</h1>
+            <h1>CHEATER FIVE</h1>
             <p class="price-brutal-large">$30</p>
 
             <div class="status-banner">
@@ -35,15 +35,7 @@
             </div>
 
             <div class="product-description-brutal">
-                <p>Heavyweight 6.5oz cotton. Slightly boxy fit. Signature SUNSET RATS front graphic.</p>
-            </div>
-
-            <div class="color-selector-brutal">
-                <label>COLOR</label>
-                <div class="color-buttons">
-                    <button class="color-btn-brutal active" data-image="images/sunset rats tee.png" data-alt="SUNSET RATS - WHITE">WHITE</button>
-                    <button class="color-btn-brutal" data-image="images/sunset rats tee bone.png" data-alt="SUNSET RATS - BONE">BONE</button>
-                </div>
+                <p>Heavyweight cotton tee. Cheater Five graphic.</p>
             </div>
 
             <div class="size-selector-brutal">
@@ -88,17 +80,6 @@
             btn.addEventListener('click', () => {
                 sizeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-            });
-        });
-
-        const productImage = document.getElementById('sunset-rats-tee-image');
-        const colorBtns = document.querySelectorAll('.color-btn-brutal');
-        colorBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                colorBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                productImage.src = btn.dataset.image;
-                productImage.alt = btn.dataset.alt;
             });
         });
     </script>

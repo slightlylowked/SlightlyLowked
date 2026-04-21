@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCT | SUNSET RATS</title>
+    <title>PRODUCT | RACER</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
     <div class="noise"></div>
 
-    <!-- Nav -->
     <nav class="nav-brutal">
         <a href="index.html" class="nav-home">HOME</a>
         <div class="nav-links-brutal">
@@ -18,16 +17,15 @@
         </div>
     </nav>
 
-    <!-- Product Detail -->
     <section class="product-detail-brutal">
         <div class="product-image-brutal">
             <div class="product-placeholder-large">
-                <img id="sunset-rats-tee-image" src="images/sunset rats tee.png" alt="SUNSET RATS - WHITE">
+                <img src="images/Greyhound shirt.png" alt="RACER">
             </div>
         </div>
 
         <div class="product-info-brutal">
-            <h1>SUNSET RATS</h1>
+            <h1>RACER</h1>
             <p class="price-brutal-large">$30</p>
 
             <div class="status-banner">
@@ -35,15 +33,7 @@
             </div>
 
             <div class="product-description-brutal">
-                <p>Heavyweight 6.5oz cotton. Slightly boxy fit. Signature SUNSET RATS front graphic.</p>
-            </div>
-
-            <div class="color-selector-brutal">
-                <label>COLOR</label>
-                <div class="color-buttons">
-                    <button class="color-btn-brutal active" data-image="images/sunset rats tee.png" data-alt="SUNSET RATS - WHITE">WHITE</button>
-                    <button class="color-btn-brutal" data-image="images/sunset rats tee bone.png" data-alt="SUNSET RATS - BONE">BONE</button>
-                </div>
+                <p>Heavyweight cotton tee. Racer graphic.</p>
             </div>
 
             <div class="size-selector-brutal">
@@ -71,7 +61,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-brutal">
         <div class="footer-brutal-content">
             <p>BETWEEN NOISE AND KNOWING</p>
@@ -88,17 +77,6 @@
             btn.addEventListener('click', () => {
                 sizeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-            });
-        });
-
-        const productImage = document.getElementById('sunset-rats-tee-image');
-        const colorBtns = document.querySelectorAll('.color-btn-brutal');
-        colorBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                colorBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                productImage.src = btn.dataset.image;
-                productImage.alt = btn.dataset.alt;
             });
         });
     </script>
